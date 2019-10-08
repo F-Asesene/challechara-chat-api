@@ -5,7 +5,7 @@ var port = process.env.PORT || 3000;
 
 
 io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
+  socket.on('chat', function(msg){
     io.emit('chat message', msg);
   });
 });
